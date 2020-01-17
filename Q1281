@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int subtractProductAndSum(int n) {
+       int arr[1000];
+        int i = 0;
+        int sum = 0;
+        int product = 1;
+        int res;
+        int COUNT = 0;
+        while(n>0){
+            arr[i] = n%10;
+            n = n/10;
+            i++;
+            COUNT++;
+        }
+        for(int j=COUNT-1; j>=0; j--){
+            sum = sum + arr[j];
+            product = product * arr[j];
+        }
+        cout << sum << endl;
+        cout << product << endl;
+        res = product - sum;
+        return res;
+    }
+};
