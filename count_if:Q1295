@@ -1,0 +1,7 @@
+class Solution {
+public:
+    int findNumbers(vector<int>& nums){
+        int counter = count_if(nums.begin(), nums.end(), [](int n){return (to_string(n).size()%2) == 0;});
+        return counter;
+    }   
+};
